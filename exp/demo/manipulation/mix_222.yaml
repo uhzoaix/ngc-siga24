@@ -1,0 +1,5 @@
+222|body:
+  new_key: fandisk|body
+  mode: TL_mix
+  seg: [0.2, 0.6]
+  ts_reverse: False

@@ -1,0 +1,6 @@
+002946|body:
+  new_key: CAD|body
+  mode: TL_sym
+  seg: [0.3, 0.4]
+  sym_axis: 0.5
+  ts_reverse: False

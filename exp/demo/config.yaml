@@ -1,0 +1,49 @@
+experiment_name: demo
+description: overfitting 50 shapes 
+logging_root: results
+training:
+  num_epochs: 5000
+  num_batch_val: 1
+  val_type: None
+  epochs_til_ckpt : 3000
+  steps_til_summary : 50
+  epochs_til_showval: 50
+  clip_grad: False
+  optim:
+    type: Adam
+    lr: 0.0001
+    beta1: 0.9
+    beta2: 0.999
+    amsgrad: False
+
+dataset:
+  root: /path/to/your/dataset
+  type: NGCDataset
+  num_batch: 5
+  file_name: sdf_samples.pkl
+  n_sample: 40000
+
+model:
+  type: NGCNet
+  # n_curve is a number larger than the total curve counts in dataset
+  n_curve: 300
+  dim_code: 256
+  dim_feat: 256
+  num_pos_encoding: 6
+  encoder_curve:
+    size: [256, 256, 256, 256]
+    activation_type: silu
+  decoder_curve:
+    size: [259, 256, 256, 256, 256, 1]
+    activation_type: silu
+  
+loss:
+  sdf_loss:
+    enable: True
+    factor: 1
+    metric: L1
+
+  code_loss:
+    enable: True
+    factor: 0.0001
+    metric: L2

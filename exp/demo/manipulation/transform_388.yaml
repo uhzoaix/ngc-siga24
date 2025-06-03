@@ -1,0 +1,4 @@
+scaling:
+  head: 
+    scales: [1, 1., 2]
+    coords: [0., 0.7, 1.]
