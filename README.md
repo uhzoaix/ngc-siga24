@@ -6,11 +6,12 @@ PyTorch implementation for paper [Controllable Shape Modeling with Neural Genera
 <img src='Teaser.png' />
 
 ## Requirements
-Install from requirements.txt.
-```
-pip install -r requirements.txt
-```
+Python dependencies: 
+- python >= 3.9
+- pytorch >= 1.12
+- numpy scipy trimesh pyyaml scikit-image tqdm dotted pymeshlab tensorboard matplotlib
 
+Optionally, running the scripts in `utils/vis_blender` requires the installation of Blender.
 
 ## Quick Start
 For a quick start, we provide the pre-trained model and minimal data for running the demo shape deformation and blending application:

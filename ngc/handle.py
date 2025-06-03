@@ -10,7 +10,6 @@ from curve_handle import CurveHandle
 
 class Handle():
     """docstring for Handle.
-    Anisotropic Ball and Curve Handle
     """
     def __init__(self, arg=None):
         if arg is None:
